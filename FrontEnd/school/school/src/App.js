@@ -144,7 +144,8 @@ function App() {
   }}>
     <br></br>
     <label for="dob">Dob: </label>
-    <input type="date" id="dob" name="birthday" value={getDate} onChange={dateChange} />
+    <input type="date" id="dob" name="birthday" max={new Date(new Date().getTime()).toISOString().substring(0, 10)}  value={getDate} onChange={dateChange} />
+    {/* <input type="date" id="dob" name="birthday" max={new Date(new Date().getTime() + 86400000).toISOString().substring(0, 10)}  value={getDate} onChange={dateChange} /> */}
     {/* {console.log(getDate)} */}
         <br></br>
         <br></br>
